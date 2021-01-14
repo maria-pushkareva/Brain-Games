@@ -2,13 +2,13 @@ name: eslint-check
 
 on: push
 
+branches: - '**'
 jobs:
-  super-lint:
-    name: super-eslinter 
-    # The type of machine to run the job on
+  build:
     runs-on: ubuntu-latest
-
-   steps:
-      - name: Run linter
-        # Run Linter
-        run: make lint
+    
+  steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with: node-version: 14
+    - run: make lint
