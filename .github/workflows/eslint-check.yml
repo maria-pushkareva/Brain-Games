@@ -1,13 +1,10 @@
-name: eslint-check
+name: 'eslint-check'
 
 on: push
 
 jobs:
-  example-job:
+  test:
     runs-on: ubuntu-latest
     steps:
-      
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - run: npm install
-      - run: make lint
+      - name: 'test'
+        run: make lint
