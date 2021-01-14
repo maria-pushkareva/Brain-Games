@@ -1,14 +1,14 @@
 install:
-  npm install
+	npm install
 
 brain-games:
-  node bin/brain-games.js
+	node bin/brain-games.js
 
 publish:
-  npm publish --dry-run
+	npm publish --dry-run
 
 lint:
-  npx eslint .
+	npx eslint .
 
 lint-fix:
-  npx eslint --fix .
+	npx eslint --fix .
