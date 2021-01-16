@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import isEven from './utilities.js';
-import playFullGame from './index.js';
+import { isEven, getRandomNum } from '../utilities.js';
+import playFullGame from '../index.js';
 
 // сonst getRandomInteger = () => (Math.floor(Math.random() * 100) + 1);
 
@@ -13,7 +13,7 @@ const receiveAnswer = (num) => {
 };
 
 const playOneRound = () => {
-  const num = (Math.floor(Math.random() * 100) + 1);
+  const num = getRandomNum(1, 100);
   const answer = receiveAnswer(num).toLowerCase();
   const correctAnswer = isEven(num);
   if (answer === correctAnswer) {
