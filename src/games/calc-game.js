@@ -1,8 +1,5 @@
 import readlineSync from 'readline-sync';
 import { getRandomNum, calculate, chooseOperator } from '../utilities.js';
-import playFullGame from '../index.js';
-
-// сonst getRandomInteger = () => (Math.floor(Math.random() * 100) + 1);
 
 const description = 'What is the result of the expression?';
 
@@ -28,6 +25,4 @@ const playOneRound = () => {
   return (answer === correctAnswer);
 };
 
-const start = () => playFullGame(playOneRound, description);
-
-export default start;
+export { playOneRound, description };
