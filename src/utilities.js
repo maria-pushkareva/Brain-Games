@@ -23,3 +23,13 @@ export const calculate = (num1, num2, operator) => {
       return num1 * num2;
   }
 };
+
+export const getGreatestCommonDevisor = (num1, num2) => {
+  let result = 1;
+  for (let i = 2; (i <= num1 && i <=num2); i += 1) {
+    if ((num1 % i === 0) && (num2 % i === 0)) {
+      result = i;
+    }
+  }
+  return result;
+};
