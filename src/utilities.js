@@ -33,3 +33,13 @@ export const getGreatestCommonDevisor = ([num1, num2]) => {
   }
   return result;
 };
+
+export const isPrime = (num) => {
+  let devisor;
+  for (let i = num; i > 1; i -= 1) {
+    if (num % i === 0) {
+      devisor = i;
+    }
+  };
+  return (devisor === num) ? 'yes' : 'no';
+};
