@@ -1,28 +1,15 @@
-import readlineSync from 'readline-sync';
 import { getRandomNum, calculate, chooseOperator } from '../utilities.js';
 
-const description = 'What is the result of the expression?';
-
-const receiveAnswer = (question) => {
-  console.log(`Question: ${question}`);
-  const answer = readlineSync.question('Your answer: ');
-  return answer;
-};
-
-const playOneRound = () => {
+export const getRandom = () => {
   const num1 = getRandomNum(1, 100);
   const num2 = getRandomNum(1, 100);
   const operator = chooseOperator(getRandomNum(1, 3));
-
-  const question = `${num1} ${operator} ${num2}`;
-
-  const answer = receiveAnswer(question);
-  const correctAnswer = calculate(num1, num2, operator).toString();
-
-  if (answer === correctAnswer) {
-    console.log('Correct!');
-  } else { console.log(`"${answer}" is wrong answer ;(. Correct answer was "${correctAnswer}"`); }
-  return (answer === correctAnswer);
+  console.log([num1, operator, num2]);
+  return [num1, operator, num2];
 };
 
-export { playOneRound, description };
+export const getQuestion = ([num1, operator, num2]) => `${num1} ${operator} ${num2}`;
+
+export const getCorrectAnswer = (expression) => calculate(expression).toString();
+
+export const description = 'What is the result of the expression?';

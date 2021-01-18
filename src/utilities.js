@@ -13,7 +13,7 @@ export const chooseOperator = (num) => {
   }
 };
 
-export const calculate = (num1, num2, operator) => {
+export const calculate = ([num1, operator, num2]) => {
   switch (operator) {
     case '+':
       return num1 + num2;
@@ -24,7 +24,7 @@ export const calculate = (num1, num2, operator) => {
   }
 };
 
-export const getGreatestCommonDevisor = (num1, num2) => {
+export const getGreatestCommonDevisor = ([num1, num2]) => {
   let result = 1;
   for (let i = 2; (i <= num1 && i <= num2); i += 1) {
     if ((num1 % i === 0) && (num2 % i === 0)) {
