@@ -8,3 +8,5 @@
 [![asciicast](https://asciinema.org/a/z1OXcuW9wRVSso4DKsTjSheuq.svg)](https://asciinema.org/a/z1OXcuW9wRVSso4DKsTjSheuq)
 
 [![asciicast](https://asciinema.org/a/P2yucjnqNbw0c4E4zFU39qoC6.svg)](https://asciinema.org/a/P2yucjnqNbw0c4E4zFU39qoC6)
+
+[![asciicast](https://asciinema.org/a/Pr9LaCp0sl19v6zvQQWIslPid.svg)](https://asciinema.org/a/Pr9LaCp0sl19v6zvQQWIslPid)
