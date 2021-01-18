@@ -40,6 +40,6 @@ export const isPrime = (num) => {
     if (num % i === 0) {
       devisor = i;
     }
-  };
+  }
   return (devisor === num) ? 'yes' : 'no';
 };
