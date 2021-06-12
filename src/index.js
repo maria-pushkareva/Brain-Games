@@ -3,11 +3,7 @@ import askName from './cli.js';
 
 const roundCounter = 3;
 
-const receiveAnswer = (question) => {
-  console.log(`Question: ${question}`);
-  const answer = readlineSync.question('Your answer: ');
-  return answer;
-};
+const receiveAnswer = () => readlineSync.question('Your answer: ');
 
 const playFullGame = (getRandom, getQuestion, getCorrectAnswer, description) => {
   console.log('Welcome to the Brain Games!');
@@ -15,12 +11,14 @@ const playFullGame = (getRandom, getQuestion, getCorrectAnswer, description) => 
 
   console.log(description);
 
-  let currentRound = 1;
+  let currentRound = 0;
 
-  do {
+  while (currentRound < roundCounter) {
+    currentRound += 1;
     const random = getRandom();
     const question = getQuestion(random);
-    const answer = receiveAnswer(question);
+    console.log(`Question: ${question}`);
+    const answer = receiveAnswer();
     const correctAnswer = getCorrectAnswer(random);
 
     if (answer !== correctAnswer) {
@@ -29,10 +27,9 @@ const playFullGame = (getRandom, getQuestion, getCorrectAnswer, description) => 
     }
 
     console.log('Correct!');
-    currentRound += 1;
-  } while (currentRound <= roundCounter);
+  }
 
-  if (currentRound > roundCounter) {
+  if (currentRound === roundCounter) {
     console.log(`Congratulations, ${name}!`);
   } else { console.log(`Let's try again, ${name}!`); }
 };

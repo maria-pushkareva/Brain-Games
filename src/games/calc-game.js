@@ -4,7 +4,6 @@ export const getRandom = () => {
   const num1 = getRandomNum(1, 100);
   const num2 = getRandomNum(1, 100);
   const operator = chooseOperator(getRandomNum(1, 3));
-  console.log([num1, operator, num2]);
   return [num1, operator, num2];
 };
 
