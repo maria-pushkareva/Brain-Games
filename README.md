@@ -1,6 +1,6 @@
 ## Welcome to The Brain Games!
 
-The Brain Games consist of five games. In each of them, the user is asked to answer a question. The game ends when the user gives three correct answers or when he gives the wrong one.
+The Brain Games is a set of five console games. In each of them, the user is asked to answer a question. The game ends when the user gives three correct answers or when he makes a mistake.
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/de-euforie/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/de-euforie/frontend-project-lvl1/actions) [![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability) [![Actions Status](https://github.com/de-euforie/frontend-project-lvl1/workflows/eslint-check/badge.svg)](https://github.com/de-euforie/frontend-project-lvl1/actions)
